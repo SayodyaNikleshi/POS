@@ -1,0 +1,315 @@
+/* Custom CSS for a Modern and Unified POS System UI */
+:root {
+    --primary-color: #3498db; /* Professional Blue */
+    --secondary-bg: #f4f6f9; /* Light Grey/Off-white for body/background */
+    --content-bg: #ffffff; /* White for main content panels */
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --danger-color: #e74c3c;
+    --dark-content: #34495e;
+}
+
+body {
+    background-color: var(--secondary-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Login/Signup Page Styles --- */
+.login, .signup {
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(44, 62, 80, 0.9));
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box {
+    background-color: var(--content-bg);
+    width: 850px; /* Slightly wider */
+    height: 550px; /* Slightly taller */
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.left-panel {
+    background: linear-gradient(45deg, var(--primary-color), #2980b9);
+    width: 40%; /* Smaller left panel for visual emphasis */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.left-panel h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.right-panel {
+    background-color: var(--content-bg);
+    width: 60%; /* Larger right panel for form */
+    padding: 3rem;
+    color: var(--dark-content);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    border-radius: 8px; /* Softer rounded corners */
+    border: 1px solid #bdc3c7;
+}
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.login-btn, .signup-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.login-btn {
+    display: block; /* Ensure it takes full width of w-50 div */
+    margin-left: 0;
+    margin-right: auto;
+}
+.signup-btn {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.show-btn {
+    height: auto;
+    background-color: #ecf0f1;
+    color: var(--dark-content);
+    border: 1px solid #bdc3c7;
+    border-left: none;
+    transition: background-color 0.2s;
+}
+.show-btn:hover {
+    background-color: #dcdcdc;
+    color: var(--dark-content);
+}
+
+.forgot-link {
+    color: var(--danger-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.forgot-link:hover {
+    color: #c0392b;
+}
+
+.signup-text {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+/* --- End Login/Signup Styles --- */
+
+
+/* --- Dashboard/Main Content Styles --- */
+
+.header {
+    position: sticky; /* Use sticky instead of fixed if you don't want it always visible */
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: var(--dark-content);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+}
+
+.header .nav-link:hover {
+    background-color: #5d6d7e;
+}
+
+.main-content {
+    background-color: var(--content-bg); /* Use white for content background */
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Redefine Action Buttons using the new palette */
+.btn-save {
+    background-color: var(--success-color); /* Green */
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-update {
+    background-color: var(--primary-color); /* Blue */
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-delete {
+    background-color: var(--danger-color); /* Red */
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-reset {
+    background-color: #95a5a6; /* Silver/Grey */
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-history {
+    background-color: #e67e22; /* Carrot Orange */
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-order {
+    background-color: var(--success-color); /* Green */
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* Unified Hover Style for all custom buttons */
+.btn-delete:hover, .btn-save:hover, .btn-reset:hover, .btn-update:hover, .btn-history:hover, .btn-order:hover {
+    opacity: 0.85;
+    background-color: inherit; /* Inherit the base color for simple opacity change */
+    color: white;
+}
+
+.invoice-btn {
+    background-color: var(--dark-content);
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    width: 100px;
+    padding: 5px;
+    transition: opacity 0.2s;
+}
+.invoice-btn:hover {
+    opacity: 0.9;
+}
+
+
+table {
+    background-color: var(--content-bg);
+    color: var(--dark-content);
+}
+
+.table thead {
+    background-color: var(--dark-content);
+    color: white;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card i {
+    font-size: 3rem;
+    opacity: 0.7;
+}
+
+.welcome {
+    font-size: 1.8rem;
+    color: var(--dark-content);
+}
+
+/* Bootstrap Overrides for Dashboard */
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-success { background-color: var(--success-color) !important; }
+.bg-warning { background-color: var(--warning-color) !important; }
+
+/* Spacing Adjustments */
+.container {
+    margin-top: 30px; /* Reduced margin, relying on section padding */
+}
+.topic-div, .cards-div {
+    margin-top: 20px; /* Reduced large top margins */
+}
+.id-with-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.second-btn-grp {
+    margin-top: 30px;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    /* Login/Signup adjustments */
+    .popup-box {
+        width: 95%;
+        height: auto;
+        min-height: 400px;
+    }
+    .right-panel {
+        width: 100%;
+        padding: 2rem;
+    }
+    .left-panel {
+        display: none;
+    }
+
+    /* General application adjustments */
+    .welcome {
+        font-size: 1.5rem;
+    }
+    .cards-div, .topic-div {
+        margin-top: 10px;
+    }
+    .header .nav-link {
+        padding: 0.5rem 0.5rem;
+    }
+    .btn-set {
+        gap: 8px;
+    }
+    .btn-set >  .btn {
+        flex: 1 1 45%;
+        max-width: 48%; /* Adjust to fit two buttons per row cleanly */
+    }
+    .btn-order {
+        width: 100%;
+    }
+    .invoice-btn {
+        width: 100%;
+    }
+}
